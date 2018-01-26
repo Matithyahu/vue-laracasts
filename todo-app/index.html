@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+<div id="root">
+
+<h2>All Tasks</h2>
+<ul>
+  <li v-bind:class="{ complete: task.completed }" v-for="task in tasks">{{ task.description }} <button v-on:click="toggle(task)">Toggle</button></li>
+</ul>
+
+<h2>Incomplete Tasks</h2>
+<ul>
+  <li v-for="task in incompleteTasks" v-text="task.description"></li>
+</ul>
+
+<h2>Complete Tasks</h2>
+<ul>
+  <li v-bind:class="{ complete: task.completed }" v-for="task in completeTasks" v-text="task.description"></li>
+</ul>
+
+</div>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
