@@ -13,7 +13,11 @@
 
 <h2>All Tasks</h2>
 <ul>
-  <li v-bind:class="{ complete: task.completed }" v-for="task in tasks">{{ task.description }} <button v-on:click="toggle(task)">Toggle</button></li>
+  <li v-bind:class="{ complete: task.completed }" v-for="task in tasks">
+    <label>
+      <input type="checkbox" v-model="task.completed"> {{task.description}}
+    </label>
+  </li>
 </ul>
 
 <h2>Incomplete Tasks</h2>
