@@ -11,7 +11,6 @@ var app = new Vue({
 
       methods: {
 
-        }
       },
 
       computed: {
